@@ -1,0 +1,26 @@
+
+/* Simple Nav CSS.  */
+
+.nav { margin: 0; padding: 0; background: rgb(0,0,0); background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(99,99,99,1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(99,99,99,1))); background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(99,99,99,1) 100%); background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(99,99,99,1) 100%); background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(99,99,99,1) 100%); background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(99,99,99,1) 100%); behavior: url(PIE.php); -pie-background: linear-gradient(#000, #777);}
+
+.nav>li { list-style: none; position: relative; white-space: nowrap; float: left; zoom: 1;}
+.nav li a { color:#fff; text-decoration: none; font: 18px "Open Sans"; display: block; padding: 10px 0px; border-right: solid 1px #999; box-sizing: border-box; -moz-box-sizing: border-box; }
+.nav li a:hover { background: #666; }
+
+/* 1st lvl drop down ==============================================  */
+
+.nav li ul { margin: 0; padding: 0; display: none; position: absolute; box-shadow: 0px 10px 13px -9px #000; width: 175px; background: #444; }
+.nav li ul li { margin: 0px; position: relative; list-style: none;}
+.nav li ul li a { background-image: none; background: none; color: #fff; height: auto; padding: 5px 5px; text-align: left;}
+.nav li ul li a:hover  { background: #666; }
+
+/* higher lvl dropdowns ========================================= */
+
+.nav li ul li ul { left: 175px; top: 0px; }
+
+/* These classes are used to make the nav items display full width =========  */
+
+li.tablecell { display: table-cell; text-align: center; float: none; }
+li.tablecell>a {  }
+.table { border-spacing:0; border-collapse:collapse; border: none; display: table; width: 100%; }
+li.tablecell:last-child a { border-right: none; }
