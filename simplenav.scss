@@ -1,0 +1,59 @@
+
+$font1: 'Source Sans Pro', sans-serif;
+$primary: #3a3a3a;
+$accent1: #810000; 
+$dropdownwidth: 200px;
+
+nav { 
+    ul { 
+		margin: 0; 
+		padding: 0; }
+	
+	a { 
+		text-decoration: none; 
+		padding: 10px 0px; 
+		box-sizing: border-box; 
+		color: inherit; 
+		display: block; 
+		text-align: center; }  
+	
+    li { 
+		list-style: none; 
+		position: relative; 
+		color: $primary; 
+		font-family: $font1; 
+		font-size: 17px; 
+		display: block; 
+		float: left;
+		
+        &.active, &:hover { 
+			color: $accent2; }
+			
+        ul { 
+			display: none; 
+			position: absolute; 
+			box-shadow: 0px 10px 13px -9px #000; 
+			width: $dropdownwidth; 
+			background: #444; 
+			z-index: 200;
+			
+            li { 
+				margin: 0px; 
+				position: relative; 
+				list-style: none; 
+				
+                ul { 
+					left: $dropdownwidth; 
+					top: 0px; }
+            }
+            
+			a { 
+				background-image: none; 
+				background: none; 
+				color: inherit; 
+				height: auto; 
+				padding: 5px 5px; 
+				text-align: left; }
+        }
+    }
+}

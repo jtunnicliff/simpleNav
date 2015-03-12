@@ -1,10 +1,7 @@
 /* =======================================================================================================
-simpleNav3
+simpleNav4
 Written By Jody Tunnicliff
-
-
 =========================================================================================================== */
-
 
 (function( $ ) {
 		$.fn.simpleNav = function(options) {
@@ -16,25 +13,39 @@ Written By Jody Tunnicliff
 			var settings = $.extend( {
 				'fx' 		: 'slide',
 				'speed'		: 500,
-				'full' 	: true
+				'full' 	: true,
+        'edge2edge' : false
 			}, options);
 			
 		/* ================================================================================================ */
-		/* Set items to table cell is full width option is activated =====================================  */	
+		/* Set width's on each nav item to span the full width =====================================  */	
 		/* ================================================================================================ */
 		
 			if(settings.full){
-				var ew = 1;
-				var e = $(this).children('li').length;
+				var totalmenuwidth = 0;
+				var numitems = $(this).children('li').length;
+            if(settings.edge2edge){
+                numitems--;
+            }  
 				$(this).children('li').each(function() {
-					ew += $(this).width();
+				    totalmenuwidth += $(this).width(); 
 				});
-				var pad = parseInt(($(this).width() - ew) / (e*2));
-				$(this).children('li').children('a').css({ "padding-left":pad,"padding-right":pad });
-				$(this).addClass('table');
-				$(this).children('li').each(function() {
-					$(this).addClass('tablecell');
-				});
+				var itemwidth = parseInt(($(this).width() - totalmenuwidth) / (numitems));
+        var widthchange=0;  
+        $(this).children('li').each(function() {
+            widthchange=itemwidth;
+            if(settings.edge2edge){
+                if($(this).is(':first-child')) { 
+                    widthchange=widthchange/2;
+                    $(this).children('a').css({"text-align":"left"});
+                } 
+                if($(this).is(':last-child')) {
+                    widthchange=widthchange/2;
+                    $(this).children('a').css({"text-align":"right"});
+                }
+            }
+				    $(this).children('a').css({ "width":$(this).width()+widthchange, "padding-left":"0", "padding-right":"0" });
+				});  
 			}
 			
 		/* ================================================================================================ */
@@ -61,8 +72,6 @@ Written By Jody Tunnicliff
 				var fxout='slideUp';
 				break;
 		}
-		
-			
 			$(this).find('li').hover(
 			function(e1) { 
 				$(this).children("ul").stop(true,true)[fxin](settings.speed);

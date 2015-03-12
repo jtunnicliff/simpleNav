@@ -1,0 +1,54 @@
+/* Simple nav CSS */
+
+nav {}
+
+nav ul { 
+	margin: 0; 
+	padding: 0; }
+	
+nav li { 
+	list-style: none; 
+	position: relative; 
+	color: #3a3a3a; 
+	font-family: "Source Sans Pro", sans-serif; 
+	font-size: 17px; 
+	display: block; 
+	float: left; }
+	
+nav li.active, nav.top li:hover { 
+	color: #d93929; }
+
+nav a { 
+	text-decoration: none; 
+	padding: 10px 0px; 
+	box-sizing: border-box; 
+	color: inherit; 
+	display: block; 
+	text-align: center; }
+	
+nav li ul { 
+	margin: 0; 
+	padding: 0; 
+	display: none; 
+	position: absolute; 
+	box-shadow: 0px 10px 13px -9px #000; 
+	width: 175px; 
+	background: #444; 
+	z-index: 200; }
+	
+nav li ul li { 
+	margin: 0px; 
+	position: relative; 
+	list-style: none; }
+	
+nav li ul li ul { 
+	left: 175px; 
+	top: 0px; }
+	
+nav li ul a { 
+	background-image: none; 
+	background: none; 
+	color: inherit; 
+	height: auto; 
+	padding: 5px 5px; 
+	text-align: left; }
