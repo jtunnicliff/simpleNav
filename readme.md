@@ -2,7 +2,7 @@
 
 ###Options
 
-These are the options and the default values you can use with Simple Nav 3:
+These are the options and the default values you can use with SimpleNav:
 
 fx – (‘slide’,’fade’,’none’) – This option sets the effect to use on the drop down. Default value is ‘slide’.
 
