@@ -29,7 +29,7 @@ Code the Menu in an unordered list:
 		</ul>
 	</nav>
 	
-Put this in the <head> of the site:
+Put this in the head section of the site:
 
 	<script>
 		/* Simplenavav */
