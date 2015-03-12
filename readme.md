@@ -34,7 +34,7 @@ Put this in the head section of the site:
 	<script>
 		/* Simplenavav */
 		$(document).ready(function() {
-			$('nav.top>ul').simpleNav({
+			$('nav>ul').simpleNav({
 				full: true,
 				fx: 'slide',
 				speed: 500,
