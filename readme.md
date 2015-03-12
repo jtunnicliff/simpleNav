@@ -10,4 +10,4 @@ speed – (value) – This is the speed of the transition used for the drop down
 
 full – (true,false) – This tells simpleNav if you want the nav to span the full width of the parent or not. Default value is true
 
-Instructions are at http://jodyt.com/simplenav3/
+Instructions are at http://jodyt.com/simplenav/
