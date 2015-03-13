@@ -14,7 +14,8 @@ Written By Jody Tunnicliff
 				'fx' 		: 'slide',
 				'speed'		: 500,
 				'full' 	: true,
-        'edge2edge' : false
+				'edge2edge' : false,
+				'dropdownicon': "<i class='fa fa-chevron-down'></i>"
 			}, options);
 			
 		/* ================================================================================================ */
@@ -46,8 +47,30 @@ Written By Jody Tunnicliff
             }
 				    $(this).children('a').css({ "width":$(this).width()+widthchange, "padding-left":"0", "padding-right":"0" });
 				});  
+          
+        /* ensure menu items will not wrap */
+        var newwidth=0;
+        $(this).children('li').each(function() {
+				    newwidth += $(this).width(); 
+				}); 
+        var correction=newwidth-$(this).width();
+        console.log(correction);
+        if(correction>0){
+            console.log($(this).children('li:last-child').width());
+            var fixwidth=$(this).children('li:last-child').width()-correction;
+            $(this).children('li:last-child').css({"width":fixwidth+'px'});
+            
+        }
 			}
 			
+    /* ================================================================================================ */
+		/* Add a drop down icon ==================================================================  */
+		/* ================================================================================================ */    
+       
+        if(settings.dropdownicon!="none"){
+            $(this).children('li').children('ul').parent('li').children('a').append(settings.dropdownicon);            
+        }
+        
 		/* ================================================================================================ */
 		/* Make the drop downs work ==================================================================  */
 		/* ================================================================================================ */

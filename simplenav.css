@@ -26,6 +26,9 @@ nav a {
 	display: block; 
 	text-align: center; }
 	
+nav i { 
+	margin-left: 5px; }
+	
 nav li ul { 
 	margin: 0; 
 	padding: 0; 
@@ -39,7 +42,8 @@ nav li ul {
 nav li ul li { 
 	margin: 0px; 
 	position: relative; 
-	list-style: none; }
+	list-style: none; 
+	float: none; }
 	
 nav li ul li ul { 
 	left: 175px; 

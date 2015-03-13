@@ -12,6 +12,8 @@ full – (true,false) – This tells simpleNav if you want the nav to span the f
 
 edge2edge - (true,false) - If set to true the menu will span edge to edge of the parent. full must also be set to true. Default value is false
 
+dropdownicon: (string) - The icon to place by items that contain a dropdown.  Default is the font aweson chevron.  Set to 'none' if you don't want to display an icon.
+
 ###Usage
 
 Include the js and css file:

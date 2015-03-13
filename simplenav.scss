@@ -17,6 +17,9 @@ nav {
 		display: block; 
 		text-align: center; }  
 	
+	i { 
+		margin-left: 5px;}
+	
     li { 
 		list-style: none; 
 		position: relative; 
@@ -41,6 +44,7 @@ nav {
 				margin: 0px; 
 				position: relative; 
 				list-style: none; 
+				float: none;
 				
                 ul { 
 					left: $dropdownwidth; 
