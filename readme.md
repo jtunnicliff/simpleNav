@@ -1,4 +1,4 @@
-#SimpleNav 4.0
+#SimpleNav
 
 ###Options
 
@@ -40,7 +40,8 @@ Put this in the head section of the site:
 				full: true,
 				fx: 'slide',
 				speed: 500,
-				edge2edge: true
+				edge2edge: true,
+				dropdownicon: '<i class="fa fa-caret-down"></i>'
 			});
 		});	
 	</script>
